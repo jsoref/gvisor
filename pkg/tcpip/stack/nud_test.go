@@ -807,7 +807,7 @@ func TestNUDStateRecomputeReachableTime(t *testing.T) {
 
 			// Verify that ReachableTime isn't recomputed when none of the
 			// configuration options change. The random factor is changed so that if
-			// a recompution were to occur, ReachableTime would change.
+			// a recomputation were to occur, ReachableTime would change.
 			rng.num = defaultFakeRandomNum / 2.0
 			if got, want := s.ReachableTime(), test.want; got != want {
 				t.Errorf("got ReachableTime = %q, want = %q", got, want)
