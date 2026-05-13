@@ -425,8 +425,8 @@ for {
         for computing the next protocol number or total length. So *some*
         mechanism is needed for a `Layer` to see neighboring layers.
     *   We could pass the entire array `Layers` to the `toBytes()` function.
-        Passing an array to a method that includes in the array the function
-        receiver itself seems wrong.
+        Passing an array to a method that includes the function receiver itself
+        in the array seems wrong.
 
 #### `layerState`
 
