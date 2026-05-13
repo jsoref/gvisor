@@ -1138,7 +1138,7 @@ func payload(l Layer) (buffer.Buffer, error) {
 }
 
 // layerChecksum calculates the checksum of the Layer header, including the
-// peusdeochecksum of the layer before it and all the bytes after it.
+// PseudoHeaderChecksum of the layer before it and all the bytes after it.
 func layerChecksum(l Layer, protoNumber tcpip.TransportProtocolNumber) (uint16, error) {
 	totalLength := uint16(totalLength(l))
 	var xsum uint16
