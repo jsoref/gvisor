@@ -123,7 +123,7 @@ func (v *mapVisitor) visit(start uintptr, pte *PTE, align uintptr) bool {
 		v.prev = true
 	}
 	if p&align != 0 {
-		// We will install entries at a smaller granulaity if we don't
+		// We will install entries at a smaller granularity if we don't
 		// install a valid entry here, however we must zap any existing
 		// entry to ensure this happens.
 		pte.Clear()
