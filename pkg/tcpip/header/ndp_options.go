@@ -806,7 +806,7 @@ func (o NDPDNSSearchList) Lifetime() time.Duration {
 // DomainNames returns a DNS search list of domain names.
 //
 // DomainNames will parse the backing buffer as outlined by RFC 1035 section
-// 3.1 and return a list of strings, with all domain names in lower case.
+// 3.1 and return a list of strings, with all domain names in lowercase.
 func (o NDPDNSSearchList) DomainNames() ([]string, error) {
 	var domainNames []string
 	return domainNames, o.iterDomainNames(func(domainName string) { domainNames = append(domainNames, domainName) })
@@ -907,7 +907,7 @@ func (o NDPDNSSearchList) iterDomainNames(fn func(string)) error {
 					}
 				}
 
-				// If b is an upper case character, make it lower case.
+				// If b is an upper case character, make it lowercase.
 				if isUpperLetter(b) {
 					b = b - 'A' + 'a'
 				}
