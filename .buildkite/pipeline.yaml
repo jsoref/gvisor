@@ -142,7 +142,7 @@ steps:
       queue: "default"
 
   # Check that the Go branch builds. This is not technically required, as this build is maintained
-  # as a GitHub action in order to preserve this maintaince across forks. However, providing the
+  # as a GitHub action in order to preserve this maintenance across forks. However, providing the
   # action here may provide easier debuggability and diagnosis on failure.
   - <<: *common
     <<: *source_test
