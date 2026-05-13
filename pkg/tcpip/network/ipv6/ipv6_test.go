@@ -328,7 +328,7 @@ func TestReceiveOnSolicitedNodeAddr(t *testing.T) {
 			}
 
 			// Should receive a packet destined to the solicited node address of
-			// addr2/addr3 now that we have added added addr2.
+			// addr2/addr3 now that we have added addr2.
 			test.rxf(t, s, e, addr1, snmc, 1)
 
 			protocolAddr3 := tcpip.ProtocolAddress{
