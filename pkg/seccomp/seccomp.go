@@ -13,7 +13,7 @@
 // limitations under the License.
 
 // Package seccomp provides generation of basic seccomp filters. Currently,
-// only little endian systems are supported.
+// only little-endian systems are supported.
 package seccomp
 
 import (

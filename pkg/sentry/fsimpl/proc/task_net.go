@@ -334,7 +334,7 @@ func writeInetAddr(w io.Writer, family int, i linux.SockAddr) {
 		// machine. Then similar to Linux, we format it with %X, which will print
 		// the most-significant byte of the __be32 address first, which is now
 		// actually the least-significant byte of the original address in
-		// linux.SockAddrInet.Addr on little endian machines, due to the conversion.
+		// linux.SockAddrInet.Addr on little-endian machines, due to the conversion.
 		addr := hostarch.ByteOrder.Uint32(a.Addr[:])
 
 		fmt.Fprintf(w, "%08X:%04X ", addr, port)

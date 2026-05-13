@@ -590,7 +590,7 @@ func (h *virtioNetHdr) marshal() []byte {
 		0: byte(h.flags),
 		1: byte(h.gsoType),
 
-		// Manually lay out the fields in little-endian byte order. Little endian =>
+		// Manually lay out the fields in little-endian byte order. little-endian =>
 		// least significant bit goes to the lower address.
 
 		2: byte(h.hdrLen),

@@ -120,7 +120,7 @@ func parseHeader(ctx context.Context, f fullReader) (elfInfo, error) {
 		return elfInfo{}, linuxerr.ENOEXEC
 	}
 
-	// We only support 64-bit, little endian binaries
+	// We only support 64-bit, little-endian binaries
 	if class := elf.Class(ident[elf.EI_CLASS]); class != elf.ELFCLASS64 {
 		log.Infof("Unsupported ELF class: %v", class)
 		return elfInfo{}, linuxerr.ENOEXEC

@@ -2607,7 +2607,7 @@ func TestEvaluateRoute(t *testing.T) {
 // the result in the destination register.
 // Note: Relies on expected behavior of the Immediate and Comparison operation.
 func TestEvaluateByteorder(t *testing.T) {
-	// Given a big-endian and little endian byte slice of the same number, returns
+	// Given a big-endian and little-endian byte slice of the same number, returns
 	// the correct byte slice based on the host endianness.
 	// Note: Uses enclosure so endianness doesn't need to be passed as an arg or
 	// rechecked for every call.
