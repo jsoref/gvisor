@@ -154,7 +154,7 @@ def go_library(name, srcs, deps = [], imports = [], stateify = True, force_add_s
       srcs: the library sources.
       deps: the library dependencies.
       imports: imports required for stateify.
-      stateify: whether statify is enabled (default: true).
+      stateify: whether stateify is enabled (default: true).
       force_add_state_pkg: whether to skip checking whether the state package
         is included in `deps`, and to just instead include it outright.
         This allows `go_library` to be used in conjunction with `select`
