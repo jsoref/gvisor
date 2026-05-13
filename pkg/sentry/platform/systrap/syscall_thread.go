@@ -230,7 +230,7 @@ func (t *syscallThread) syscall(sysno uintptr, args ...arch.SyscallArgument) (ui
 		// Wait for reply.
 		//
 		// futex waits for sentryMsg.state that isn't changed, so it will
-		// returns only only when the other side will call FUTEX_WAKE.
+		// returns only when the other side will call FUTEX_WAKE.
 		futexWaitWake(&sentryMsg.state, atomic.LoadUint32(&sentryMsg.state))
 	}
 
