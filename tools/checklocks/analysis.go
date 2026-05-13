@@ -795,7 +795,7 @@ type callCommon interface {
 	Value() *ssa.Call
 }
 
-// checkInstruction checks the legality the single instruction based on the
+// checkInstruction checks the legality of the single instruction based on the
 // current lockState.
 func (pc *passContext) checkInstruction(inst ssa.Instruction, lff *lockFunctionFacts, ls *lockState) (*ssa.Return, *lockState) {
 	// Globals are values, not instructions. Check each use with the current
