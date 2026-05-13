@@ -1745,7 +1745,7 @@ func (c *containerMounter) makeMountPoint(
 			if rootMode.IsDir() {
 				return fmt.Errorf("mountpoint %q isn't a directory, got mode %s", dest, mode)
 			} else {
-				return fmt.Errorf("mountpoint %q isn't not a file, got mode %s", dest, mode)
+				return fmt.Errorf("mountpoint %q isn't a file, got mode %s", dest, mode)
 			}
 		}
 		// Target already exists.
