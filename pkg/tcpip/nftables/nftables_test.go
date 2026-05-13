@@ -2493,7 +2493,7 @@ func TestEvaluateLast(t *testing.T) {
 }
 
 // TestEvaluateRoute tests that the Route operation correctly loads the specific
-// route data into into the destination register.
+// route data into the destination register.
 // The nft binary commands used to generate these are stated above each test.
 // Also note that all these commands mirror the ones in TestInterpretRouteOps.
 // All commands should be preceded by nft --debug=netlink.
