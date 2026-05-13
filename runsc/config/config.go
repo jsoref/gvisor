@@ -159,7 +159,7 @@ type Config struct {
 	// RXChecksumOffload indicates that RX Checksum Offload is enabled.
 	RXChecksumOffload bool `flag:"rx-checksum-offload"`
 
-	// QDisc indicates the type of queuening discipline to use by default
+	// QDisc indicates the type of queueing discipline to use by default
 	// for non-loopback interfaces.
 	QDisc QueueingDiscipline `flag:"qdisc"`
 
