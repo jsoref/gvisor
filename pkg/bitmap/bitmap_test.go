@@ -81,7 +81,7 @@ func TestAdd(t *testing.T) {
 		{"Add without extending bitBlock", 64, 10},
 		{"Add without extending bitblock with margin number", 63, 64},
 		{"Add with extended one block", 1024, 1025},
-		{"Add with extended more then one block", 1024, 2048},
+		{"Add with extended more than one block", 1024, 2048},
 	}
 
 	for _, tt := range tests {

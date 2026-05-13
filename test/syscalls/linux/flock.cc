@@ -477,7 +477,7 @@ TEST_F(FlockTest, TestDupFdUnlockRelease) {
 TEST_F(FlockTest, TestDupFdFollowedByLock) {
   // This test will verify that taking a lock on a file descriptor that has
   // already been dupped means that the lock is shared between both. This is
-  // slightly different than than duping on an already locked FD.
+  // slightly different than duping on an already locked FD.
   FileDescriptor dup_fd = ASSERT_NO_ERRNO_AND_VALUE(test_file_fd_.Dup());
 
   // Take a lock.
