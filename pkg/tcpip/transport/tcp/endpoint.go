@@ -1876,7 +1876,7 @@ func (e *Endpoint) OnSetReceiveBufferSize(rcvBufSz, oldSz int64) (newSz int64, p
 	e.RcvAutoParams.Disabled = true
 
 	// Immediately send an ACK to uncork the sender silly window
-	// syndrome prevetion, when our available space grows above aMSS
+	// syndrome prevention, when our available space grows above aMSS
 	// or half receive buffer, whichever smaller.
 	if crossed, above := e.windowCrossedACKThresholdLocked(availAfter-availBefore, int(rcvBufSz)); crossed && above {
 		sendNonZeroWindowUpdate = true
