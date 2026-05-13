@@ -2889,7 +2889,7 @@ func GetDanglingEndpoints() []Endpoint {
 	return es
 }
 
-// ReleaseDanglingEndpoints clears out all all reference counted objects held by
+// ReleaseDanglingEndpoints clears out all reference counted objects held by
 // dangling endpoints.
 func ReleaseDanglingEndpoints() {
 	// Get the dangling endpoints first to avoid locking around Release(), which
