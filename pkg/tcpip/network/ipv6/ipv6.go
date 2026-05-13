@@ -581,7 +581,7 @@ func (e *endpoint) Enable() tcpip.Error {
 		return nil
 	}
 
-	// Perform DAD on the all the unicast IPv6 endpoints that are in the permanent
+	// Perform DAD on all the unicast IPv6 endpoints that are in the permanent
 	// state.
 	//
 	// Addresses may have already completed DAD but in the time since the endpoint
