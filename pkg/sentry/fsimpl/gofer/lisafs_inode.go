@@ -88,7 +88,7 @@ type lisafsInode struct {
 	// readFDLisa and writeFDLisa may or may not represent the same LISAFS FD.
 	// Once either transitions from closed (Ok() == false) to open
 	// (Ok() == true), it may be mutated with dentry.handleMu locked, but cannot
-	// be closed until the dentry is destroyei. writeFDLisa is protected by
+	// be closed until the dentry is destroyed. writeFDLisa is protected by
 	// dentry.handleMu.
 	writeFDLisa lisafs.ClientFD `state:"nosave"`
 }
