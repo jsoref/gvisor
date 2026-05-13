@@ -524,12 +524,12 @@ func TestHandleReport(t *testing.T) {
 		expectReportsFor []tcpip.Address
 	}{
 		{
-			name:             "Unpecified empty",
+			name:             "Unspecified empty",
 			reportAddr:       tcpip.Address{},
 			expectReportsFor: []tcpip.Address{addr1, addr2},
 		},
 		{
-			name:             "Unpecified any",
+			name:             "Unspecified any",
 			reportAddr:       tcpip.AddrFromSlice([]byte("\x00\x00\x00\x00")),
 			expectReportsFor: []tcpip.Address{addr1, addr2},
 		},
@@ -636,14 +636,14 @@ func TestHandleQuery(t *testing.T) {
 		expectDelayedReportsFor []tcpip.Address
 	}{
 		{
-			name:                    "Unpecified empty",
+			name:                    "Unspecified empty",
 			queryAddr:               tcpip.Address{},
 			maxDelay:                0,
 			expectQueriedReportsFor: []tcpip.Address{addr1, addr2},
 			expectDelayedReportsFor: nil,
 		},
 		{
-			name:                    "Unpecified any",
+			name:                    "Unspecified any",
 			queryAddr:               tcpip.AddrFromSlice([]byte("\x00\x00\x00\x00")),
 			maxDelay:                1,
 			expectQueriedReportsFor: []tcpip.Address{addr1, addr2},
@@ -768,14 +768,14 @@ func TestHandleQueryV2Response(t *testing.T) {
 		expectDelayedReportsFor []tcpip.Address
 	}{
 		{
-			name:                    "Unpecified empty",
+			name:                    "Unspecified empty",
 			queryAddr:               tcpip.Address{},
 			maxDelay:                0,
 			expectQueriedReportsFor: []tcpip.Address{addr1, addr2},
 			expectDelayedReportsFor: nil,
 		},
 		{
-			name:                    "Unpecified any",
+			name:                    "Unspecified any",
 			queryAddr:               tcpip.AddrFromSlice([]byte("\x00\x00\x00\x00")),
 			maxDelay:                1,
 			expectQueriedReportsFor: []tcpip.Address{addr1, addr2},
