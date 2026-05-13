@@ -527,7 +527,7 @@ func startContainerAndWait(spec *specs.Spec, conf *config.Config, cid string, wa
 	// Forward signals to init in the container. Thus if we get SIGINT from
 	// ^C, the container gracefully exit, and we can clean up.
 	//
-	// N.B. There is a still a window before this where a signal may kill
+	// N.B. There is still a window before this where a signal may kill
 	// this process, skipping cleanup.
 	stopForwarding := ct.ForwardSignals(0 /* pid */, spec.Process.Terminal /* fgProcess */)
 	defer stopForwarding()
