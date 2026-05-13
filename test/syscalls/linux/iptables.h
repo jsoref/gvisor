@@ -196,7 +196,7 @@ struct ipt_replace {
   struct xt_counters* counters;
 
   // The entries to write to the table. This will run past the size defined by
-  // sizeof(srtuct ipt_replace);
+  // sizeof(struct ipt_replace);
   struct ipt_entry entries[0];
 };
 
