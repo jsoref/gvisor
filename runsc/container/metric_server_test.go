@@ -772,7 +772,7 @@ func TestMetricServerChecksRootDirectoryAccess(t *testing.T) {
 	}
 	defer os.Chmod(te.sleepConf.RootDir, prevStat.Mode())
 	if _, err := os.ReadDir(te.sleepConf.RootDir); err == nil {
-		t.Logf("Can still read directory %v despite chmodding it to 0. Maybe we are running as root? Skipping test.", te.sleepConf.RootDir)
+		t.Logf("Can still read directory %v despite chmoding it to 0. Maybe we are running as root? Skipping test.", te.sleepConf.RootDir)
 		return
 	}
 	shorterCtx, shorterCtxCancel := context.WithTimeout(te.testCtx, time.Second)
