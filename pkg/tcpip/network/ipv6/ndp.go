@@ -1234,7 +1234,7 @@ func (ndp *ndpState) generateSLAACAddr(prefix tcpip.Subnet, state *slaacPrefixSt
 
 			// Generate an address within prefix from the modified EUI-64 of ndp's
 			// NIC's Ethernet MAC address.
-			header.EthernetAdddressToModifiedEUI64IntoBuf(linkAddr, addrBytes[header.IIDOffsetInIPv6Address:])
+			header.EthernetAddressToModifiedEUI64IntoBuf(linkAddr, addrBytes[header.IIDOffsetInIPv6Address:])
 		} else {
 			// We have no way to regenerate an address in response to an address
 			// conflict when addresses are not generated with opaque IIDs.

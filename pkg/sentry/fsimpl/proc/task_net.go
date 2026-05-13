@@ -383,7 +383,7 @@ func commonGenerateTCP(ctx context.Context, buf *bytes.Buffer, k *kernel.Kernel,
 		// Field: sl; entry number.
 		fmt.Fprintf(buf, "%4d: ", se.ID)
 
-		// Field: local_adddress.
+		// Field: local_address.
 		var localAddr linux.SockAddr
 		if t != nil {
 			if local, _, err := sops.GetSockName(t); err == nil {
@@ -545,7 +545,7 @@ func (d *netUDPData) Generate(ctx context.Context, buf *bytes.Buffer) error {
 		// Field: sl; entry number.
 		fmt.Fprintf(buf, "%5d: ", se.ID)
 
-		// Field: local_adddress.
+		// Field: local_address.
 		var localAddr linux.SockAddrInet
 		if t != nil {
 			if local, _, err := sops.GetSockName(t); err == nil {

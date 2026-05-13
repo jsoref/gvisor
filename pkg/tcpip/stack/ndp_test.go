@@ -74,7 +74,7 @@ func addrForSubnet(subnet tcpip.Subnet, linkAddr tcpip.LinkAddress) tcpip.Addres
 
 	subnetID := subnet.ID()
 	addrBytes := subnetID.AsSlice()
-	header.EthernetAdddressToModifiedEUI64IntoBuf(linkAddr, addrBytes[header.IIDOffsetInIPv6Address:])
+	header.EthernetAddressToModifiedEUI64IntoBuf(linkAddr, addrBytes[header.IIDOffsetInIPv6Address:])
 	return tcpip.AddressWithPrefix{
 		Address:   tcpip.AddrFromSlice(addrBytes),
 		PrefixLen: 64,
@@ -4667,7 +4667,7 @@ func TestAutoGenAddrWithEUI64IIDNoDADRetries(t *testing.T) {
 
 			subnetID := addrType.subnet.ID()
 			addrBytes := subnetID.AsSlice()
-			header.EthernetAdddressToModifiedEUI64IntoBuf(linkAddr1, addrBytes[header.IIDOffsetInIPv6Address:])
+			header.EthernetAddressToModifiedEUI64IntoBuf(linkAddr1, addrBytes[header.IIDOffsetInIPv6Address:])
 			addr := tcpip.AddressWithPrefix{
 				Address:   tcpip.AddrFromSlice(addrBytes),
 				PrefixLen: 64,
