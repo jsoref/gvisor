@@ -2034,7 +2034,7 @@ func (d *dentry) destroyLocked(ctx context.Context) {
 	// scalability.
 	d.inode.fs.renameMu.Unlock()
 
-	// No locks need to be held during destoryDisconnected.
+	// No locks need to be held during destroyDisconnected.
 	d.destroyDisconnected(ctx, destroyInode)
 
 	d.inode.fs.renameMu.Lock()
