@@ -429,7 +429,7 @@ func TestCPUSetAncestor(t *testing.T) {
 				t.Fatalf("os.Create(): %v", err)
 			}
 
-			// cgroup files mmust exist.
+			// cgroup files must exist.
 			dir, err := os.MkdirTemp(parent, "child")
 			if err != nil {
 				t.Fatalf("error creating temporary directory: %v", err)
