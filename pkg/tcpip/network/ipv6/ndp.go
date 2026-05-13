@@ -1381,7 +1381,7 @@ func (ndp *ndpState) generateTempSLAACAddr(prefix tcpip.Subnet, prefixState *sla
 		}
 	}
 
-	// As per RFC RFC 4941 section 3.3 step 5, we MUST NOT create a temporary
+	// As per RFC 4941 section 3.3 step 5, we MUST NOT create a temporary
 	// address with a zero preferred lifetime. The checks above ensure this
 	// so we know the address is not deprecated.
 	addressEndpoint := ndp.addAndAcquireSLAACAddr(generatedAddr, true /* temporary */, stack.AddressLifetimes{
