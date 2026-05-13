@@ -401,7 +401,7 @@ func (m *MountResp) CheckedUnmarshal(src []byte) ([]byte, bool) {
 	return UnmarshalUnsafeMIDSlice(m.SupportedMs, srcRemain), true
 }
 
-// ChannelReq is an empty requent to create a Channel.
+// ChannelReq is an empty request to create a Channel.
 type ChannelReq struct{ EmptyMessage }
 
 // String implements fmt.Stringer.String.
