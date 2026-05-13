@@ -511,7 +511,7 @@ func (c *Context) BuildSegmentWithAddrs(payload []byte, h *Headers, src, dst tcp
 }
 
 // SendSegment sends a TCP segment that has already been built and written to a
-// buffer.VectorisedView.
+// buffer.VectorizedView.
 func (c *Context) SendSegment(s buffer.Buffer) {
 	pkt := stack.NewPacketBuffer(stack.PacketBufferOptions{
 		Payload: s,
