@@ -32,7 +32,7 @@ import (
 )
 
 // ProcFDBindMount is the path where /proc/self/fd is bind-mounted inside the
-// gofer's mount tree. Redhat distros don't allow bind-mounts in /proc/self
+// gofer's mount tree. Red Hat distros don't allow bind-mounts in /proc/self
 // directories due to SELinux rules.
 const ProcFDBindMount = "/proc/fs"
 
