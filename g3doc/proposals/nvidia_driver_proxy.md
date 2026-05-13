@@ -132,7 +132,7 @@ The extent to which applications use `cudaMallocManaged()` is unclear; use of
 `cudaMalloc()` and explicit copying appears to predominate in
 performance-sensitive code. PyTorch contains one non-test use of
 `cudaMallocManaged()`[^cite-pytorch-uvm], but it is not immediately clear what
-circumstances cause the containing function to be invoked. Tensorflow does not
+circumstances cause the containing function to be invoked. TensorFlow does not
 appear to use `cudaMallocManaged()` outside of test code.
 
 ### Device Memory Caching
