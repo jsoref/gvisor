@@ -8117,7 +8117,7 @@ func TestTCPTimeWaitDuplicateFINExtendsTimeWait(t *testing.T) {
 	time.Sleep(4 * time.Second)
 
 	// Send an ACK and it should not generate any packet as the socket
-	// should still be in TIME_WAIT for another another 5 seconds due
+	// should still be in TIME_WAIT for another 5 seconds due
 	// to the duplicate FIN we sent earlier.
 	*ackHeaders = *finHeaders
 	ackHeaders.SeqNum = ackHeaders.SeqNum + 1
