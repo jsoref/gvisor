@@ -179,7 +179,7 @@ type numberPacker struct {
 // packedNumber is a non-serializable but smaller-memory-footprint container for a numerical value.
 // It can be unpacked out to a Number struct.
 // This contains 4 bytes where we try to pack as much as possible.
-// For the overhwelmingly-common case of integers that fit in 30 bits (i.e. 30 bits where the first
+// For the overwhelmingly-common case of integers that fit in 30 bits (i.e. 30 bits where the first
 // 2 bits are zero, we store them directly here. Otherwise, we store the offset of a 64-bit number
 // within numberPacker.
 // Layout, going from highest to lowest bit:
