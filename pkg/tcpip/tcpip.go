@@ -792,7 +792,7 @@ type Endpoint interface {
 	//	Anything else -- the attempt to connect failed.
 	//
 	// If address.Addr is empty, this means that Endpoint has to be
-	// disconnected if this is supported, otherwise
+	// disconnected if this is supported; otherwise,
 	// ErrAddressFamilyNotSupported must be returned.
 	Connect(address FullAddress) Error
 

@@ -78,7 +78,7 @@ func handleIOErrorImpl(ctx context.Context, partialResult bool, errOrig, intr er
 	switch {
 	case translatedErr == io.EOF:
 		// EOF is always consumed. If this is a partial read/write
-		// (result != 0), the application will see that, otherwise
+		// (result != 0), the application will see that; otherwise,
 		// they will see 0.
 		return true, nil
 	case linuxerr.Equals(linuxerr.EFBIG, translatedErr):

@@ -277,7 +277,7 @@ func TestJobControlSignalExec(t *testing.T) {
 	// explicitly test interactive mode, use /bin/bash. See b/116981926.
 	execArgs := &control.ExecArgs{
 		Filename: "/bin/bash",
-		// Don't let bash execute from profile or rc files, otherwise
+		// Don't let bash execute from profile or rc files; otherwise,
 		// our PID counts get messed up.
 		Argv: []string{"/bin/bash", "--noprofile", "--norc"},
 		// Pass the pty replica as FD 0, 1, and 2.

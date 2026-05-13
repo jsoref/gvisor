@@ -683,7 +683,7 @@ func (r *Reader) read(p []byte) (int, error) {
 		}
 	}
 
-	// Make sure that everything has been decoded successfully, otherwise
+	// Make sure that everything has been decoded successfully; otherwise,
 	// parts of p may not actually have completed.
 	for pendingInline > 0 {
 		if err := r.schedule(nil, func(c *chunk) error {
