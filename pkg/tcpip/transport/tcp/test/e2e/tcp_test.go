@@ -311,7 +311,7 @@ func TestConnectIncrementActiveConnection(t *testing.T) {
 
 	c.CreateConnected(context.TestInitialSequenceNumber, 30000, -1 /* epRcvBuf */)
 	if got := stats.TCP.ActiveConnectionOpenings.Value(); got != want {
-		t.Errorf("got stats.TCP.ActtiveConnectionOpenings.Value() = %d, want = %d", got, want)
+		t.Errorf("got stats.TCP.ActiveConnectionOpenings.Value() = %d, want = %d", got, want)
 	}
 }
 
