@@ -247,7 +247,7 @@ func (i *lisafsInode) updateHandles(ctx context.Context, h handle, readable, wri
 func (i *lisafsInode) updateMetadataLocked(ctx context.Context, h handle) error {
 	handleMuRLocked := false
 	if !h.fdLisa.Ok() {
-		// Use open FDs in preferenece to the control FD. This may be significantly
+		// Use open FDs in preference to the control FD. This may be significantly
 		// more efficient in some implementations. Prefer a writable FD over a
 		// readable one since some filesystem implementations may update a writable
 		// FD's metadata after writes, without making metadata updates immediately
