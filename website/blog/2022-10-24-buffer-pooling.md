@@ -24,9 +24,9 @@ gVisor networking throughput by 30+%.
 
 ## A Waste Management Problem
 
-Go guarantees a basic level of memory safety through the use of a garbage
-collector (GC), which is described in great detail by the Go team
-[here](https://tip.golang.org/doc/gc-guide). The Go runtime automatically tracks
+Go guarantees a [basic level of memory safety through the use of a garbage
+collector
+(GC)](https://tip.golang.org/doc/gc-guide). The Go runtime automatically tracks
 and frees objects allocated from the heap, relieving the programmer of the often
 painful and error-prone process of manual memory management. Unfortunately,
 tracking and freeing memory during runtime comes at a performance cost. Running
