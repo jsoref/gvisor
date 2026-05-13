@@ -539,7 +539,7 @@ type ControlFDImpl interface {
 	ConnectWithCreds(sockType uint32, uid UID, gid GID) (int, error)
 
 	// BindAt creates a host unix domain socket of type sockType, bound to
-	// the given namt of type sockType, bound to the given name. It returns
+	// the given name of type sockType, bound to the given name. It returns
 	// a ControlFD that can be used for path operations on the socket, a
 	// BoundSocketFD that can be used to Accept/Listen on the socket, and a
 	// host FD that can be used for event notifications (like new
