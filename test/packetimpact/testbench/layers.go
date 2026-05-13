@@ -1336,7 +1336,7 @@ func (l *Payload) merge(other Layer) error {
 // Layers is an array of Layer and supports similar functions to Layer.
 type Layers []Layer
 
-// linkLayers sets the linked-list ponters in ls.
+// linkLayers sets the linked-list pointers in ls.
 func (ls *Layers) linkLayers() {
 	for i, l := range *ls {
 		if i > 0 {
