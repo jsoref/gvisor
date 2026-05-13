@@ -1504,7 +1504,7 @@ func (s *sock) getSockOptIPv6(t *kernel.Task, ep commonEndpoint, name int, outPt
 		// Linux truncates the output binary to outLen.
 		ib := t.CopyScratchBuffer(uintv.SizeBytes())
 		uintv.MarshalUnsafe(ib)
-		// Handle cases where outLen is lesser than sizeOfInt32.
+		// Handle cases where outLen is less than sizeOfInt32.
 		if len(ib) > outLen {
 			ib = ib[:outLen]
 		}

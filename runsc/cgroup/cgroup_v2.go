@@ -941,7 +941,7 @@ func parseUint(s string, base, bitSize int) (uint64, error) {
 	if err != nil {
 		intValue, intErr := strconv.ParseInt(s, base, bitSize)
 		// 1. Handle negative values greater than MinInt64 (and)
-		// 2. Handle negative values lesser than MinInt64
+		// 2. Handle negative values less than MinInt64
 		if intErr == nil && intValue < 0 {
 			return 0, nil
 		} else if errors.Is(intErr, strconv.ErrRange) && intValue < 0 {
