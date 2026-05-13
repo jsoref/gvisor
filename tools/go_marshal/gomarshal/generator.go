@@ -432,7 +432,7 @@ func (g *Generator) generateOne(t *marshallableType, fset *token.FileSet) *inter
 			abortAt(fset.Position(t.slice.comment.Slash), "Array type marked as '+marshal slice:...', but this is not supported. Perhaps fold one of the dimensions?")
 		}
 	default:
-		// This should've been filtered out by collectMarshallabeTypes.
+		// This should've been filtered out by collectMarshallableTypes.
 		panic(fmt.Sprintf("Unexpected type %+v", ty))
 	}
 	return i
