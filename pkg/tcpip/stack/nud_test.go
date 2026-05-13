@@ -182,7 +182,7 @@ func TestNUDFunctions(t *testing.T) {
 			{
 				err := s.ClearNeighbors(test.nicID, ipv6.ProtocolNumber)
 				if diff := cmp.Diff(test.expectedErr, err); diff != "" {
-					t.Errorf("s.ClearNeigbors(%d, %d) error mismatch (-want +got):\n%s", test.nicID, ipv6.ProtocolNumber, diff)
+					t.Errorf("s.ClearNeighbors(%d, %d) error mismatch (-want +got):\n%s", test.nicID, ipv6.ProtocolNumber, diff)
 				} else if test.expectedErr == nil {
 					if neighbors, err := s.Neighbors(test.nicID, ipv6.ProtocolNumber); err != nil {
 						t.Errorf("s.Neighbors(%d, %d): %s", test.nicID, ipv6.ProtocolNumber, err)
