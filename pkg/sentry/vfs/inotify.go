@@ -35,7 +35,7 @@ import (
 // must be a power 2 for rounding below.
 const inotifyEventBaseSize = 16
 
-// EventType defines different kinds of inotfiy events.
+// EventType defines different kinds of inotify events.
 //
 // The way events are labelled appears somewhat arbitrary, but they must match
 // Linux so that IN_EXCL_UNLINK behaves as it does in Linux.
