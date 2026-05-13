@@ -627,7 +627,7 @@ type slaacPrefixState struct {
 	// The number of times an address has been generated and added to the IPv6
 	// endpoint.
 	//
-	// Addresses may be regenerated in reseponse to a DAD conflicts.
+	// Addresses may be regenerated in response to a DAD conflicts.
 	generationAttempts uint8
 
 	// The maximum number of times to attempt regeneration of a SLAAC address
