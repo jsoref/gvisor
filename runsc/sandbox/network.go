@@ -735,7 +735,7 @@ func loopbackLink(conf *config.Config, iface net.Interface, addrs []net.Addr, di
 }
 
 // routesForIface iterates over all routes for the given interface and converts
-// them to boot.Routes. It also returns the a default v4/v6 route if found.
+// them to boot.Routes. It also returns the default v4/v6 route if found.
 func routesForIface(iface net.Interface, disableIPv6 bool) ([]boot.Route, *boot.Route, *boot.Route, error) {
 	link, err := netlink.LinkByIndex(iface.Index)
 	if err != nil {

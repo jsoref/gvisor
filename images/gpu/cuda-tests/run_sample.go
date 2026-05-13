@@ -407,7 +407,7 @@ func (x *XServer) Windows(ctx context.Context) ([]*XWindow, error) {
 	return windows, nil
 }
 
-// ID returns a the window ID as a string.
+// ID returns the window ID as a string.
 func (w *XWindow) ID() string {
 	return fmt.Sprintf("%d", w.id)
 }

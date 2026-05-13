@@ -49,7 +49,7 @@ const (
 	// Linux default TCP_RETR2, net.ipv4.tcp_retries2.
 	MaxRetries = 15
 
-	// InitialSsthresh is the the maximum int value, which depends on the
+	// InitialSsthresh is the maximum int value, which depends on the
 	// platform.
 	InitialSsthresh = math.MaxInt
 
