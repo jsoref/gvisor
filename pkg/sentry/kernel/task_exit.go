@@ -1245,7 +1245,7 @@ func (t *Task) waitCollectZombieLocked(target *Task, opts *WaitOptions, asPtrace
 			t.tg.childCPUStats.Accumulate(target.tg.CPUStats())
 			t.tg.childCPUStats.Accumulate(target.tg.childCPUStats)
 			// Update t's child max resident set size. The size will be the maximum
-			// of this thread's size and all its childrens' sizes.
+			// of this thread's size and all its children's sizes.
 			if t.tg.childMaxRSS < target.tg.maxRSS {
 				t.tg.childMaxRSS = target.tg.maxRSS
 			}
