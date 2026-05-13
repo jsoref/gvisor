@@ -252,7 +252,7 @@ func TestBitmapNumOnes(t *testing.T) {
 	if bitmapOnes != uint32(190) {
 		t.Errorf("After Remove 10 number, GetNumOnes() returns: %v, wanted: %v", bitmapOnes, 190)
 	}
-	// Remove the 10 number again, the length supposed not change.
+	// Remove the 10 number again, the length is not supposed to change.
 	for i := 5; i < 15; i++ {
 		bitmap.Remove(randSlice[i])
 	}
@@ -270,7 +270,7 @@ func TestBitmapNumOnes(t *testing.T) {
 		t.Errorf("After Add 10 number, GetNumOnes() returns: %v, wanted: %v", bitmapOnes, 200)
 	}
 
-	// Add the 10 number again, the length supposed not change.
+	// Add the 10 number again, the length is not supposed to change.
 	for i := 1080; i < 1090; i++ {
 		bitmap.Add(uint32(i))
 	}
