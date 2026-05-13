@@ -14,7 +14,7 @@
 
 package test
 
-func testParameterPassingbyAddrValid(tc *oneGuardStruct) {
+func testParameterPassingByAddrValid(tc *oneGuardStruct) {
 	tc.mu.Lock()
 	nestedWithGuardByAddr(&tc.guardedField, &tc.unguardedField)
 	tc.mu.Unlock()
