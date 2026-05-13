@@ -262,8 +262,7 @@ PosixError WithSubprocess(SubprocessCallback const& running,
 
   // Wait on the process.
   wait_cleanup.Release()();
-  // If the process is reaped, then then this should return
-  // with ECHILD.
+  // If the process is reaped, then this should return with ECHILD.
   EXPECT_THAT(waitpid(child_pid, &status, WNOHANG),
               SyscallFailsWithErrno(ECHILD));
 
