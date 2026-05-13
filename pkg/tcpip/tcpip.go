@@ -995,7 +995,7 @@ const (
 	// TCPWindowClampOption is used by SetSockOptInt/GetSockOptInt to bound
 	// the size of the advertised window to this value.
 	//
-	// NOTE: This option is currently only stubed out and is a no-op
+	// NOTE: This option is currently only stubbed out and is a no-op
 	TCPWindowClampOption
 
 	// IPv6Checksum is used to request the stack to populate and validate the IPv6
