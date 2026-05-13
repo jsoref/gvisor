@@ -2607,7 +2607,7 @@ func TestEvaluateRoute(t *testing.T) {
 // the result in the destination register.
 // Note: Relies on expected behavior of the Immediate and Comparison operation.
 func TestEvaluateByteorder(t *testing.T) {
-	// Given a big endian and little endian byte slice of the same number, returns
+	// Given a big-endian and little endian byte slice of the same number, returns
 	// the correct byte slice based on the host endianness.
 	// Note: Uses enclosure so endianness doesn't need to be passed as an arg or
 	// rechecked for every call.
@@ -3769,15 +3769,15 @@ func checkPacketEquality(t *testing.T, expected, actual *stack.PacketBuffer) {
 	}
 }
 
-// numToBE converts an n-byte int to Big Endian where n is in [1, 8].
+// numToBE converts an n-byte int to big-endian where n is in [1, 8].
 // Assumes the given number can be represented in n bytes.
 func numToBE(v int, n int) []byte {
 	if n > 8 {
 		panic("cannot support more than 8 bytes")
 	}
-	// Gets 8-byte slice Big Endian representation of the number.
+	// Gets 8-byte slice big-endian representation of the number.
 	be64 := binary.BigEndian.AppendUint64(nil, uint64(v))
-	// Returns last n bytes as the n-byte Big Endian representation.
+	// Returns last n bytes as the n-byte big-endian representation.
 	return be64[8-n:]
 }
 

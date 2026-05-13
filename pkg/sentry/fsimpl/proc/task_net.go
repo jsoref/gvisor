@@ -330,7 +330,7 @@ func writeInetAddr(w io.Writer, family int, i linux.SockAddr) {
 		// least-significant byte of the address first. To emulate this, we first
 		// invert the byte order for the address using hostarch.ByteOrder.Uint32,
 		// which makes it have the equivalent encoding to a __be32 on a little
-		// endian machine. Note that this operation is a no-op on a big endian
+		// endian machine. Note that this operation is a no-op on a big-endian
 		// machine. Then similar to Linux, we format it with %X, which will print
 		// the most-significant byte of the __be32 address first, which is now
 		// actually the least-significant byte of the original address in

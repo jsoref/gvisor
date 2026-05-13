@@ -3738,7 +3738,7 @@ func interfaceIoctl(ctx context.Context, _ usermem.IO, arg int, ifr *linux.IFReq
 			hostarch.ByteOrder.PutUint16(ifr.Data[0:], uint16(linux.AF_INET))
 			hostarch.ByteOrder.PutUint16(ifr.Data[2:], 0)
 			var mask uint32 = 0xffffffff << (32 - addr.PrefixLen)
-			// Netmask is expected to be returned as a big endian
+			// Netmask is expected to be returned as a big-endian
 			// value.
 			binary.BigEndian.PutUint32(ifr.Data[4:8], mask)
 			break

@@ -1071,7 +1071,7 @@ func parseVerdict(tokens []string, lnIdx int, tkIdx int) (int, Verdict, *syserr.
 }
 
 // parseHexData parses little endian hexadecimal data from the given token,
-// converts to big endian, and returns the index of the next token to process.
+// converts to big-endian, and returns the index of the next token to process.
 func parseHexData(tokens []string, lnIdx int, tkIdx int) (int, []byte, *syserr.AnnotatedError) {
 	var bytes []byte
 	for ; tkIdx < len(tokens); tkIdx++ {
@@ -1089,7 +1089,7 @@ func parseHexData(tokens []string, lnIdx int, tkIdx int) (int, []byte, *syserr.A
 		if err != nil {
 			return 0, nil, syserr.NewAnnotatedError(syserr.ErrInvalidArgument, fmt.Sprintf("could not decode hexadecimal data: '%s'", tokens[tkIdx]))
 		}
-		// Converts the bytes to big endian and appends to the bytes slice.
+		// Converts the bytes to big-endian and appends to the bytes slice.
 		slices.Reverse(bytes4)
 		bytes = append(bytes, bytes4...)
 	}
