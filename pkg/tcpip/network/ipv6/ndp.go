@@ -1088,7 +1088,7 @@ func (ndp *ndpState) doSLAAC(prefix tcpip.Subnet, pl, vl time.Duration) {
 
 	// Make sure the prefix is valid (as far as its length is concerned) to
 	// generate a valid IPv6 address from an interface identifier (IID), as
-	// per RFC 4862 sectiion 5.5.3.d.
+	// per RFC 4862 section 5.5.3.d.
 	if prefix.Prefix() != validPrefixLenForAutoGen {
 		return
 	}
