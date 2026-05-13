@@ -1865,7 +1865,7 @@ func TestPauseResume(t *testing.T) {
 			if err := os.Remove(running); err != nil {
 				t.Fatalf("os.Remove(%q) failed: %v", running, err)
 			}
-			// Script touches the file every 100ms. Give a bit a time for it to run to
+			// Script touches the file every 100ms. Give a bit of time for it to run to
 			// catch the case that pause didn't work.
 			time.Sleep(200 * time.Millisecond)
 			if _, err := os.Stat(running); !os.IsNotExist(err) {
