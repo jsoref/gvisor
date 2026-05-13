@@ -689,7 +689,7 @@ TEST_P(UdpSocketTest, DisconnectAfterConnectWithoutBind) {
   ASSERT_NO_FATAL_FAILURE(ConnectThenDisconnect(sock_, bind_addr_, addrlen_));
 }
 
-TEST_P(UdpSocketTest, BindToAnyConnnectToLocalhost) {
+TEST_P(UdpSocketTest, BindToAnyConnectToLocalhost) {
   ASSERT_NO_ERRNO(BindAny());
 
   struct sockaddr_storage addr_storage = InetLoopbackAddr();
