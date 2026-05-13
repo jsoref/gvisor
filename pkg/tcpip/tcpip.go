@@ -1098,7 +1098,7 @@ func (*TCPSACKEnabled) isGettableTransportProtocolOption() {}
 
 func (*TCPSACKEnabled) isSettableTransportProtocolOption() {}
 
-// TCPRecovery is the loss deteoction algorithm used by TCP.
+// TCPRecovery is the loss detection algorithm used by TCP.
 type TCPRecovery int32
 
 func (*TCPRecovery) isGettableTransportProtocolOption() {}
