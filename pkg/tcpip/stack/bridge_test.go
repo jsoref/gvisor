@@ -98,7 +98,7 @@ func (n *testNotification) WriteNotify() {
 	n.ch <- true
 }
 
-// The test verifies that packates that are forwarded by
+// The test verifies that packets that are forwarded by
 // a bridge will flood to all bridge ports.
 func TestWritePacketBetweenDevices(t *testing.T) {
 	const (
