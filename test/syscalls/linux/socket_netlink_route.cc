@@ -3062,7 +3062,7 @@ TEST(NetlinkRouteTest, LinkMulticastGroupNamespaced) {
 
   constexpr int kPollTimeoutMs = 1000;
   bool got_msg = false;
-  // We expect an RTM_DELINK message for veth2 in the outer netns socket.
+  // We expect an RTM_DELLINK message for veth2 in the outer netns socket.
   // But an RTM_NEWLINK is also expected for veth1 because its peer was moved.
   // Hence the two attempts. N.B. gVisor does not send the RTM_NEWLINK because
   // IFLA_LINK_NETNSID is not yet supported.
