@@ -756,7 +756,7 @@ func (s *sender) NextSeg(nextSegHint *segment) (nextSeg, hint *segment, rescueRt
 		// See RFC 6675 Section 4
 		//
 		//     1. If there exists a smallest unSACKED sequence number
-		//     'S2' that meets the following 3 criteria for determinig
+		//     'S2' that meets the following 3 criteria for determining
 		//     loss, the sequence range of one segment of up to SMSS
 		//     octets starting with S2 MUST be returned.
 		if !s.ep.scoreboard.IsSACKED(header.SACKBlock{Start: segSeq, End: segSeq.Add(1)}) {
