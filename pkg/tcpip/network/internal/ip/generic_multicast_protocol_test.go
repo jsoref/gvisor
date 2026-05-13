@@ -898,7 +898,7 @@ func TestHandleQueryV2Response(t *testing.T) {
 	}
 }
 
-func TestV1CompatbilityModeTimer(t *testing.T) {
+func TestV1CompatibilityModeTimer(t *testing.T) {
 	tests := []struct {
 		name               string
 		robustnessVariable uint8
@@ -940,7 +940,7 @@ func TestV1CompatbilityModeTimer(t *testing.T) {
 				Rand:                      rand.New(rand.NewSource(3)),
 				Clock:                     clock,
 				MaxUnsolicitedReportDelay: maxUnsolicitedReportDelay,
-			}, false /* v1Compatibiltiy */)
+			}, false /* v1Compatibility */)
 
 			v2Check := func(t *testing.T) {
 				t.Helper()
