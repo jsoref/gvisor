@@ -512,7 +512,7 @@ type Endpoint struct {
 
 	// userTimeout if non-zero specifies a user specified timeout for
 	// a connection w/ pending data to send. A connection that has pending
-	// unacked data will be forcibily aborted if the timeout is reached
+	// unacked data will be forcibly aborted if the timeout is reached
 	// without any data being acked.
 	userTimeout time.Duration
 
