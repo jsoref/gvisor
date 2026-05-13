@@ -95,7 +95,7 @@ func dynamicCrossPkg(f func()) {
 //
 //go:noinline
 //go:nosplit
-func splitCrosssPkt() {
+func splitCrossPkt() {
 	test1.Split()
 }
 
