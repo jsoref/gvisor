@@ -907,7 +907,7 @@ func (o NDPDNSSearchList) iterDomainNames(fn func(string)) error {
 					}
 				}
 
-				// If b is an upper case character, make it lowercase.
+				// If b is an uppercase character, make it lowercase.
 				if isUpperLetter(b) {
 					b = b - 'A' + 'a'
 				}
