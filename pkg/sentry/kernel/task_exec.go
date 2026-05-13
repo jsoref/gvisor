@@ -722,7 +722,7 @@ func (t *Task) execveCredsMutexStartLock(tg *ThreadGroup) {
 // execveCredsMutexStartLock() earlier.
 func (t *Task) execveCredsMutexUnlock() {
 	if t.execveCredsMutexOwner == nil {
-		panic("calling Task does not hold hold any execveCredsMutex lock")
+		panic("calling Task does not hold any execveCredsMutex lock")
 	}
 	tg := t.execveCredsMutexOwner
 
