@@ -99,7 +99,7 @@ func (n *testNotification) WriteNotify() {
 }
 
 // The test verifies that packates that are forwarded by
-// a bridge will flooded to all bridge ports.
+// a bridge will flood to all bridge ports.
 func TestWritePacketBetweenDevices(t *testing.T) {
 	const (
 		channelLinkAddr1 = tcpip.LinkAddress("\x02\x02\x03\x04\x05\x04")
