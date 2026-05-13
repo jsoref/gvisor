@@ -5303,9 +5303,9 @@ func TestTimeWaitAssassination(t *testing.T) {
 	defer wg.Wait()
 	// We need to run this test lots of times because it triggers a very rare race
 	// condition in segment processing.
-	initalTestPort := 1024
+	initialTestPort := 1024
 	testRuns := 25
-	for port := initalTestPort; port < initalTestPort+testRuns; port++ {
+	for port := initialTestPort; port < initialTestPort+testRuns; port++ {
 		wg.Add(1)
 		go func(port uint16) {
 			defer wg.Done()
