@@ -929,7 +929,7 @@ func (ndp *ndpState) handleOffLinkRouteDiscovery(route offLinkRoute, lifetime ti
 }
 
 // rememberOnLinkPrefix remembers a newly discovered on-link prefix with IPv6
-// address with prefix prefix with lifetime l.
+// address with prefix with lifetime l.
 //
 // The prefix identified by prefix MUST NOT already be known.
 //
