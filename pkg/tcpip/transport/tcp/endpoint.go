@@ -2994,7 +2994,7 @@ func (e *Endpoint) getRemoteAddress() tcpip.FullAddress {
 func (*Endpoint) HandlePacket(stack.TransportEndpointID, *stack.PacketBuffer) {
 	// TCP HandlePacket is not required anymore as inbound packets first
 	// land at the Dispatcher which then can either deliver using the
-	// worker go routine or directly do the invoke the tcp processing inline
+	// worker go routine or directly invoke the tcp processing inline
 	// based on the state of the endpoint.
 }
 
