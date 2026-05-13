@@ -56,7 +56,7 @@ var (
 	// pprofBaseDir allows the user to change the directory to which profiles are
 	// written. By default, profiles will appear under:
 	// /tmp/profile/RUNTIME/CONTAINER_NAME/*.pprof.
-	pprofBaseDir  = flag.String("pprof-dir", "/tmp/profile", "base directory in: BASEDIR/RUNTIME/CONTINER_NAME/FILENAME (e.g. /tmp/profile/runtime/mycontainer/cpu.pprof)")
+	pprofBaseDir  = flag.String("pprof-dir", "/tmp/profile", "base directory in: BASEDIR/RUNTIME/CONTAINER_NAME/FILENAME (e.g. /tmp/profile/runtime/mycontainer/cpu.pprof)")
 	pprofDuration = flag.Duration("pprof-duration", time.Hour, "profiling duration (automatically stopped at container exit)")
 
 	// The below flags enable each type of profile. Multiple profiles can be
