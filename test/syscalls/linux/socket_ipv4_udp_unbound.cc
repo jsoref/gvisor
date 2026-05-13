@@ -1862,7 +1862,7 @@ TEST_P(IPv4UDPUnboundSocketTest, ReuseAddrReusePortDistribution) {
 
   for (int i = 0; i < 100; ++i) {
     // Send a new message to the REUSEADDR/REUSEPORT group. We use a new socket
-    // each time so that a new ephemerial port will be used each time. This
+    // each time so that a new ephemeral port will be used each time. This
     // ensures that we cycle through hashes.
     auto sender = ASSERT_NO_ERRNO_AND_VALUE(NewSocket());
     char send_buf[kMessageSize] = {};
