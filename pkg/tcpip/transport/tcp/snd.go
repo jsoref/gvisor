@@ -1233,7 +1233,7 @@ func (s *sender) SetPipe() {
 
 			// SetPipe():
 			//
-			//    (a) If IsLost(S1) returns false, Pipe is incremened by 1.
+			//    (a) If IsLost(S1) returns false, Pipe is incremented by 1.
 			//
 			// NOTE: here we mark the whole segment as lost. We do not try
 			// and test every byte in our write buffer as we maintain our
