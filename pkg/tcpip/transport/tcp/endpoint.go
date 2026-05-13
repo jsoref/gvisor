@@ -523,7 +523,7 @@ type Endpoint struct {
 	// listener.
 	deferAccept time.Duration
 
-	// acceptMu protects accepQueue
+	// acceptMu protects acceptQueue
 	acceptMu sync.Mutex `state:"nosave"`
 
 	// acceptQueue is used by a listening endpoint to send newly accepted
