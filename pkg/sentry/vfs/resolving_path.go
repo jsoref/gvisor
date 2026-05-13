@@ -200,7 +200,7 @@ func (vfs *VirtualFilesystem) getResolvingPath(creds *auth.Credentials, pop *Pat
 // Copies are independent, using the copy does not change the original and
 // vice-versa.
 //
-// Caller must call Resease() when done.
+// Caller must call Release() when done.
 func (rp *ResolvingPath) Copy() *ResolvingPath {
 	copy := resolvingPathPool.Get().(*ResolvingPath)
 	*copy = *rp // All fields all shallow copiable.
