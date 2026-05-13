@@ -2505,7 +2505,7 @@ func (k *Kernel) PopulateNewCgroupHierarchy(root Cgroup) {
 
 // ReleaseCgroupHierarchy moves all tasks out of all cgroups belonging to the
 // hierarchy with the provided id.  This is intended for use during hierarchy
-// teardown, as otherwise the tasks would be orphaned w.r.t to some controllers.
+// teardown, as otherwise the tasks would be orphaned w.r.t. to some controllers.
 func (k *Kernel) ReleaseCgroupHierarchy(hid uint32) {
 	var releasedCGs []Cgroup
 
