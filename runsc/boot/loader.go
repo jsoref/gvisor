@@ -2116,7 +2116,7 @@ func (l *Loader) signal(cid string, pid, signo int32, mode SignalDeliveryMode) e
 		return nil
 
 	case DeliverToForegroundProcessGroup:
-		if err := l.signalForegrondProcessGroup(cid, kernel.ThreadID(pid), signo); err != nil {
+		if err := l.signalForegroundProcessGroup(cid, kernel.ThreadID(pid), signo); err != nil {
 			return fmt.Errorf("signaling foreground process group in container %q PID %d: %w", cid, pid, err)
 		}
 		return nil
@@ -2170,9 +2170,9 @@ func (l *Loader) signalProcess(cid string, tgid kernel.ThreadID, signo int32) er
 	return l.k.SendExternalSignalThreadGroup(tg, &linux.SignalInfo{Signo: signo})
 }
 
-// signalForegrondProcessGroup looks up foreground process group from the TTY
+// signalForegroundProcessGroup looks up foreground process group from the TTY
 // for the given "tgid" inside container "cid", and send the signal to it.
-func (l *Loader) signalForegrondProcessGroup(cid string, tgid kernel.ThreadID, signo int32) error {
+func (l *Loader) signalForegroundProcessGroup(cid string, tgid kernel.ThreadID, signo int32) error {
 	l.mu.Lock()
 	tg, err := l.tryThreadGroupFromIDLocked(execID{cid: cid, pid: tgid})
 	if err != nil {

@@ -2445,7 +2445,7 @@ TEST_F(JobControlTest, SetForegroundProcessGroupDifferentSession) {
     char c = 'c';
     TEST_PCHECK(ReadFd(sync_setsid[0], &c, 1) == 1);
 
-    // Child is in a new session, so we can't make it the foregroup process
+    // Child is in a new session, so we can't make it the foreground process
     // group.
     TEST_PCHECK(ioctl(replica_.get(), TIOCSPGRP, &grandchild) &&
                 errno == EPERM);
