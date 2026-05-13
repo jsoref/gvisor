@@ -294,7 +294,7 @@ but with a pointer for each field that may be `nil`.
         etc.
     *   Using pointers allows us to combine `Layer`s with reflection. So the
         default `Layers` can be overridden by a `Layers` with just the TCP
-        conection's src/dst which can be overridden by one with just a test
+        connection's src/dst which can be overridden by one with just a test
         specific TCP window size.
     *   It's a proven way to separate the details of a packet from the byte
         format as shown by scapy's success.
