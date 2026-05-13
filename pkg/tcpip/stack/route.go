@@ -27,7 +27,7 @@ import (
 type Route struct {
 	routeInfo routeInfo
 
-	// localAddressNIC is the interface the address is associated with.
+	// localAddressNIC is the interface with which the address is associated.
 	// TODO(gvisor.dev/issue/4548): Remove this field once we can query the
 	// address's assigned status without the NIC.
 	localAddressNIC *nic
