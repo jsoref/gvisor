@@ -7465,7 +7465,7 @@ func TestReceiveBufferAutoTuning(t *testing.T) {
 
 		if i == 0 {
 			// In the first iteration the receiver based RTT is not
-			// yet known as a result the moderation code should not
+			// yet known; as a result, the moderation code should not
 			// increase the advertised window.
 			rawEP.VerifyACKRcvWnd(scaleRcvWnd(curRcvWnd))
 		} else {

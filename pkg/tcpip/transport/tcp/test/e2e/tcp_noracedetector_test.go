@@ -424,7 +424,7 @@ func TestCubicCongestionAvoidance(t *testing.T) {
 	for i := 0; i < iterations; i++ {
 		// Cubic grows window independent of ACKs. Cubic Window growth
 		// is a function of time elapsed since last congestion event.
-		// As a result the congestion window does not grow
+		// As a result, the congestion window does not grow
 		// deterministically in response to ACKs.
 		//
 		// We need to roughly estimate what the cwnd of the sender is
