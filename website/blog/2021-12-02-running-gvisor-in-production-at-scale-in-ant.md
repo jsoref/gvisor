@@ -84,7 +84,7 @@ For some sentry-contained syscalls in Path 2, although the syscall semantic is
 terminated in Sentry, it may further introduces one or many unexpected exits to
 host kernel. It could be a page fault when Sentry runs, and more likely, a
 schedule event in Go runtime, e.g., M idle/wakeup. An example in hand is that
-<code>futex(FUETX_WAIT)</code> and <code>epoll_wait(2)</code> could lead to M
+<code>futex(FUTEX_WAIT)</code> and <code>epoll_wait(2)</code> could lead to M
 idle and a further futex call into host kernel if it does not find any runnable
 Gs. (See the comments in https://go.dev/src/runtime/proc.go for further
 explanation about the Go scheduler).
