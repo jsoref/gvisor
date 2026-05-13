@@ -3067,11 +3067,11 @@ func TestAutoGenTempAddrRegenJobUpdates(t *testing.T) {
 
 	// The time since the last regeneration before a new temporary address is
 	// generated.
-	tempAddrRegenenerationTime := effectiveMaxTempAddrPL - regenAdv
+	tempAddrRegenerationTime := effectiveMaxTempAddrPL - regenAdv
 
 	// Advance the clock by the regeneration time but don't expect a new temporary
 	// address as the prefix is deprecated.
-	clock.Advance(tempAddrRegenenerationTime)
+	clock.Advance(tempAddrRegenerationTime)
 	select {
 	case e := <-ndpDisp.autoGenAddrC:
 		t.Fatalf("unexpected auto gen addr event = %#v", e)
