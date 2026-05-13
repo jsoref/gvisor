@@ -30,7 +30,7 @@
 //	interface: A call is made via an interface which *may* escape (soft).
 //	dynamic:   A dynamic function is dispatched which *may* escape (soft).
 //
-// To the use the package, annotate a function-level comment with either the
+// To use the package, annotate a function-level comment with either the
 // line "// +checkescape" or "// +checkescape:OPTION[,OPTION]". In the second
 // case, the OPTION field is either a type above, or one of:
 //
