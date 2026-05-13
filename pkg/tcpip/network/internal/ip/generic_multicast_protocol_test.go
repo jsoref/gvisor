@@ -1253,7 +1253,7 @@ func TestMakeAllNonMemberAndInitialize(t *testing.T) {
 				}
 			}
 
-			// Should send the initial set of unsolcited V2 reports.
+			// Should send the initial set of unsolicited V2 reports.
 			mgp.initializeGroups()
 			for i := 0; i < unsolicitedTransmissionCount; i++ {
 				if test.v1 {
