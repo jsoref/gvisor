@@ -339,7 +339,7 @@ func TestForEach(t *testing.T) {
 	for _, tc := range testcases {
 		bitmap.ForEach(tc.start, tc.end, func(idx uint32) bool {
 			if _, ok := tc.expected[idx]; !ok {
-				t.Errorf("[%d, %d): unexpeced index: %d", tc.start, tc.end, idx)
+				t.Errorf("[%d, %d): unexpected index: %d", tc.start, tc.end, idx)
 				return false
 			}
 			delete(tc.expected, idx)
