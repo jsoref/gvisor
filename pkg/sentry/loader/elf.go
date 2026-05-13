@@ -375,7 +375,7 @@ type loadedELF struct {
 	// end is the end of the ELF.
 	end hostarch.Addr
 
-	// interpter is the path to the ELF interpreter.
+	// interpreter is the path to the ELF interpreter.
 	interpreter string
 
 	// phdrAddr is the address of the ELF program headers.
