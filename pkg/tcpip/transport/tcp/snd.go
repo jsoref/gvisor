@@ -1188,7 +1188,7 @@ func (s *sender) leaveRecovery() {
 }
 
 // isAssignedSequenceNumber relies on the fact that we only set flags once a
-// sequencenumber is assigned and that is only done right before we send the
+// sequence number is assigned and that is only done right before we send the
 // segment. As a result any segment that has a non-zero flag has a valid
 // sequence number assigned to it.
 func (s *sender) isAssignedSequenceNumber(seg *segment) bool {
