@@ -1244,7 +1244,7 @@ func createPrivateMemoryFile(file *os.File, resourceID checkpoint.ResourceID, ci
 		DecommitOnDestroy: true,
 		// sentry's seccomp filters don't allow the mmap(2) syscalls that
 		// pgalloc.IMAWorkAroundForMemFile() uses. Users of private memory files
-		// are expected to have performed the work around outside the sandbox.
+		// are expected to have performed the workaround outside the sandbox.
 		DisableIMAWorkAround: true,
 		// Private memory files need to be restored correctly using this ID.
 		ResourceID: resourceID,

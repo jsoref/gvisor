@@ -853,7 +853,7 @@ func pcapAndNAT(args *boot.CreateLinksAndRoutesArgs, conf *config.Config) error 
 	return nil
 }
 
-// The below is a work around to generate iptables-legacy rules on machines
+// The below is a workaround to generate iptables-legacy rules on machines
 // that use iptables-nftables. The logic goes something like this:
 //
 //             start
