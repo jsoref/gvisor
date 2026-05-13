@@ -30,8 +30,8 @@ to deserialize using standard libraries.
 # Protocol
 
 Upon a new connection, there is a handshake message to ensure that both sides
-can communicate with each other. The handshake contract is detailed
-[here](https://cs.opensource.google/gvisor/gvisor/+/master:pkg/sentry/seccheck/points/common.proto;drc=e06df74a657e01008194f905f2795d43dd5a825e;bpv=1;bpt=1;l=63?gsn=Handshake&gs=kythe%3A%2F%2Fgithub.com%2Fgoogle%2Fgvisor%3Flang%3Dprotobuf%3Fpath%3Dpkg%2Fsentry%2Fseccheck%2Fpoints%2Fcommon.proto%234.0).
+can communicate with each other. The handshake contract is detailed in
+[pkg/sentry/seccheck/points/common.proto](https://cs.opensource.google/gvisor/gvisor/+/master:pkg/sentry/seccheck/points/common.proto;drc=e06df74a657e01008194f905f2795d43dd5a825e;bpv=1;bpt=1;l=63?gsn=Handshake&gs=kythe%3A%2F%2Fgithub.com%2Fgoogle%2Fgvisor%3Flang%3Dprotobuf%3Fpath%3Dpkg%2Fsentry%2Fseccheck%2Fpoints%2Fcommon.proto%234.0).
 
 This is the only time that the monitoring process writes to the socket. From
 this point on, it only reads a stream of trace points generated from the Sentry.
