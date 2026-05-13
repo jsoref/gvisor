@@ -301,7 +301,7 @@ func mapSegment(ctx context.Context, m *mm.MemoryManager, fd *vfs.FileDescriptio
 		if phdr.Memsz > phdr.Filesz && mapSize > fileSize {
 			zeroAddr, ok := addr.AddLength(fileSize)
 			if !ok {
-				panic(fmt.Sprintf("successfully mmaped address overflows? %#x + %#x", addr, fileSize))
+				panic(fmt.Sprintf("successfully mmapped address overflows? %#x + %#x", addr, fileSize))
 			}
 			zeroSize := int64(mapSize - fileSize)
 			if zeroSize < 0 {
