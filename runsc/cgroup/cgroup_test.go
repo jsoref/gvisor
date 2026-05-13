@@ -802,7 +802,7 @@ func TestLoadPaths(t *testing.T) {
 				"0::/system.slice/containerd.service\n",
 			mountinfo: dindMountinfo,
 			// we want relative path to /sys/fs/cgroup inside the nested container.
-			// Subcroup inside the container will be created at /sys/fs/cgroup/cpu
+			// Subcgroup inside the container will be created at /sys/fs/cgroup/cpu
 			// This will be /sys/fs/cgroup/cpu/docker/136/CGROUP_NAME
 			// outside the container
 			want: map[string]string{

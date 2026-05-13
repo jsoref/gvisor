@@ -309,7 +309,7 @@ type Args struct {
 	// resolved to their final absolute location.
 	MountsFile *os.File
 
-	// Gcgroup is the cgroup that the sandbox is part of.
+	// Cgroup is the cgroup that the sandbox is part of.
 	Cgroup cgroup.Cgroup
 
 	// CloneIntoCgroupFD, when non-nil, is an FD to `Cgroup`'s directory. The
