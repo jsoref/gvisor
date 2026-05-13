@@ -1728,7 +1728,7 @@ func (k *Kernel) incRunningTasks() {
 				k.cpuClockTickTimer.Reset(time.Duration(linux.ClockTick.Nanoseconds() - thisTickNS))
 				// Increment k.cpuClock on the CPU clock ticker goroutine's behalf.
 				// (Whole missed ticks don't matter, and adding them to k.cpuClock will
-				// just confuse the watchdog.) At the time the tick occurred, all task
+				// just confuse the watchdog.) When the tick occurred, all task
 				// goroutines were asleep, so there's nothing else to do. This ensures
 				// that our caller (Task.accountTaskGoroutineLeave()) records an
 				// updated k.cpuClock in Task.gosched.Timestamp, so that it's correctly
