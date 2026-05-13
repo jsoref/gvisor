@@ -128,7 +128,7 @@ struct ipt_getinfo {
 
   // A bitmap of which hooks apply to the table. For example, a table with hooks
   // PREROUTING and FORWARD has the value
-  // (1 << NF_IP_PRE_REOUTING) | (1 << NF_IP_FORWARD).
+  // (1 << NF_IP_PRE_ROUTING) | (1 << NF_IP_FORWARD).
   unsigned int valid_hooks;
 
   // The offset into the entry table for each valid hook. The entry table is
