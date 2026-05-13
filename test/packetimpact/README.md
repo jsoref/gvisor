@@ -359,7 +359,7 @@ The `next` and `prev` make up a link listed so that each layer can get at the
 information in the layer around it. This is necessary for some protocols, like
 TCP that needs the layer before and payload after to compute the checksum. Any
 sequence of `Layer` structs is valid so long as the parser and `toBytes`
-functions can map from type to protool number and vice-versa. When the mapping
+functions can map from type to protocol number and vice-versa. When the mapping
 fails, an error is emitted explaining what functionality is missing. The
 solution is either to fix the ordering or implement the missing protocol.
 
