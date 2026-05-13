@@ -950,7 +950,7 @@ type statusFD struct {
 }
 
 // statusFDLowerBase is a dumb hack to ensure that statusFD prefers
-// vfs.DynamicBytesFileDescriptionImpl methods to vfs.FileDescriptinDefaultImpl
+// vfs.DynamicBytesFileDescriptionImpl methods to vfs.FileDescriptionDefaultImpl
 // methods.
 //
 // +stateify savable
