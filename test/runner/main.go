@@ -614,7 +614,7 @@ func runRunsc(tc *gtest.TestCase, spec *specs.Spec) error {
 		timeout := time.After(3 * time.Second)
 		select {
 		case <-timeout:
-			log.Infof("runsc debug --stacks is timeouted")
+			log.Infof("runsc debug --stacks is timed out")
 		case <-done:
 		}
 
