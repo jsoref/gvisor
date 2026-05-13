@@ -141,7 +141,7 @@ func TestChecksum(t *testing.T) {
 	for _, tc := range testCases {
 		t.Run(fmt.Sprintf("buf size %d", len(tc.buf)), func(t *testing.T) {
 			// Also test different offsets into the buffers. This
-			// tests the correctess of optimizations dealing with
+			// tests the correctness of optimizations dealing with
 			// non-64-bit aligned numbers.
 			for offset := 0; offset < 8; offset++ {
 				t.Run(fmt.Sprintf("offset %d", offset), func(t *testing.T) {
