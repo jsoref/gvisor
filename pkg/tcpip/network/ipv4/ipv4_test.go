@@ -3332,7 +3332,7 @@ func TestReceiveFragments(t *testing.T) {
 				if err != nil {
 					t.Fatalf("(i=%d) epRaw.Read: %s", i, err)
 				}
-				// Reassambly does not take care of checksum. Here we write our own
+				// Reassembly does not take care of checksum. Here we write our own
 				// check routine instead of using checker.IPv4.
 				ip := header.IPv4(buf.Bytes())
 				for _, check := range []checker.NetworkChecker{
