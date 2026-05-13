@@ -272,7 +272,7 @@ func (v *View) ReadFrom(r io.Reader) (n int64, err error) {
 		v.chunk = v.chunk.Clone()
 	}
 	for {
-		// Check for EOF to avoid an unnnecesary allocation.
+		// Check for EOF to avoid an unnecessary allocation.
 		if _, e := r.Read(nil); e == io.EOF {
 			return n, nil
 		}
