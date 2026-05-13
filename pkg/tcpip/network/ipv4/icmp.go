@@ -663,7 +663,7 @@ func (p *protocol) returnError(reason icmpReason, pkt *stack.PacketBuffer, deliv
 	}
 
 	// If the packet wasn't delivered locally, do not use the packet's destination
-	// address as the response's source address as we should not not own the
+	// address as the response's source address as we should not own the
 	// destination address of a packet we are forwarding.
 	localAddr := origIPHdrDst
 	if !deliveredLocally {
