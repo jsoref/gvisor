@@ -885,7 +885,7 @@ func TestCurrentConnectedIncrement(t *testing.T) {
 
 // TestClosingWithEnqueuedSegments tests handling of still enqueued segments
 // when the endpoint transitions to StateClose. The in-flight segments would be
-// re-enqueued to a any listening endpoint.
+// re-enqueued to any listening endpoint.
 func TestClosingWithEnqueuedSegments(t *testing.T) {
 	c := context.New(t, e2e.DefaultMTU)
 	defer c.Cleanup()
