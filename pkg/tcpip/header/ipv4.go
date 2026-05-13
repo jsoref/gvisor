@@ -865,7 +865,7 @@ func (i *IPv4OptionIterator) Next() (IPv4Option, bool, *IPv4OptParameterProblem)
 //        order bit of the timestamp field is set to one to indicate the
 //        use of a non-standard value.
 
-// IPv4OptTSFlags sefines the values expected in the Timestamp
+// IPv4OptTSFlags defines the values expected in the Timestamp
 // option Flags field.
 type IPv4OptTSFlags uint8
 
