@@ -9,7 +9,7 @@ community forums as well as technical participation.
 
 The project maintains two mailing lists:
 
-*   [gvisor-users][gvisor-users] for accouncements and general discussion.
+*   [gvisor-users][gvisor-users] for announcements and general discussion.
 *   [gvisor-dev][gvisor-dev] for development and contribution.
 
 We'd love to hear from you!
