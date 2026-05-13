@@ -183,7 +183,7 @@ const (
 	IFLA_INFO_SLAVE_DATA = 5
 )
 
-// Virtuall ethernet attributes, from uapi/linux/veth.h.
+// Virtual ethernet attributes, from uapi/linux/veth.h.
 const (
 	VETH_INFO_PEER = 1
 )
