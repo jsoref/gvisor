@@ -109,7 +109,7 @@ func (InodeNotDirectory) NewDir(context.Context, string, vfs.MkdirOptions) (Inod
 	panic("NewDir called on non-directory inode")
 }
 
-// NewLink implements Inode.NewLinkink.
+// NewLink implements Inode.NewLink.
 func (InodeNotDirectory) NewLink(context.Context, string, Inode) (Inode, error) {
 	panic("NewLink called on non-directory inode")
 }
