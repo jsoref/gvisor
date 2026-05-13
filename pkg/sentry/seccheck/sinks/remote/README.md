@@ -36,9 +36,9 @@ can communicate with each other. The handshake contract is detailed
 This is the only time that the monitoring process writes to the socket. From
 this point on, it only reads a stream of trace points generated from the Sentry.
 Each message contain a header that describes the message being sent and a few
-more control fields, e.g. number of messages dropped. There is a full
-description of the header
-[here](https://cs.opensource.google/gvisor/gvisor/+/master:pkg/sentry/seccheck/sinks/remote/wire/wire.go).
+more control fields, e.g. number of messages dropped. There is a [full
+description of the
+header](https://cs.opensource.google/gvisor/gvisor/+/master:pkg/sentry/seccheck/sinks/remote/wire/wire.go).
 
 The payload can be deserialized based on the message type indicated in the
 header, Each message type corresponds to a protobuf type defined in one of
