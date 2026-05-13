@@ -23,7 +23,7 @@ import (
 	"testing"
 )
 
-func TestChecksumer(t *testing.T) {
+func TestChecksummer(t *testing.T) {
 	testCases := []struct {
 		name string
 		data [][]byte
@@ -76,7 +76,7 @@ func TestChecksumer(t *testing.T) {
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
 			var all bytes.Buffer
-			var c Checksumer
+			var c Checksummer
 			for _, b := range tc.data {
 				c.Add(b)
 				// Append to the buffer. We will check the checksum as a whole later.
@@ -179,11 +179,11 @@ func TestIncrementalChecksum(t *testing.T) {
 	for end := 2; end <= len(buf); end++ {
 		for start := 1; start < end; start++ {
 			t.Run(fmt.Sprintf("end=%d start=%d", end, start), func(t *testing.T) {
-				var cs Checksumer
+				var cs Checksummer
 				cs.Add(buf[:end])
 				csum := cs.Checksum()
 
-				cs = Checksumer{}
+				cs = Checksummer{}
 				cs.Add(buf[:start])
 				cs.Add(buf[start:end])
 				csumIncremental := cs.Checksum()
