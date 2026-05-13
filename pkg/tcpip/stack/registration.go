@@ -706,7 +706,7 @@ const (
 	PermanentExpired
 
 	// Temporary is an endpoint, created on a one-off basis to temporarily
-	// consider the NIC bound an an address that it is not explicitly bound to
+	// consider the NIC bound to an address that it is not explicitly bound to
 	// (such as a permanent address). Its reference count must not be biased by 1
 	// so that the address is removed immediately when references to it are no
 	// longer held.
