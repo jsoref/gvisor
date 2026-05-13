@@ -804,7 +804,7 @@ func (ndp *ndpState) handleRA(ip tcpip.Address, ra header.NDPRouterAdvert) {
 		case header.NDPPrefixInformation:
 			prefix := opt.Subnet()
 
-			// Is the prefix a link-local?
+			// Is the prefix link-local?
 			if header.IsV6LinkLocalUnicastAddress(prefix.ID()) {
 				// ...Yes, skip as per RFC 4861 section 6.3.4,
 				// and RFC 4862 section 5.5.3.b (for SLAAC).
