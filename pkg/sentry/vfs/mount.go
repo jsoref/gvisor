@@ -1323,7 +1323,7 @@ func (vfs *VirtualFilesystem) getMountpoint(ctx context.Context, creds *auth.Cre
 		return VirtualDentry{}, err
 	}
 	// Linux passes the LOOKUP_MOUNTPOINT flag to user_path_at in ksys_umount to
-	// resolve to the toppmost mount in the stack located at the specified path.
+	// resolve to the topmost mount in the stack located at the specified path.
 	// vfs.GetMountAt() imitates this behavior. See fs/namei.c:user_path_at(...)
 	// and fs/namespace.c:ksys_umount(...).
 	if vd.dentry.isMounted() {
