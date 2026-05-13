@@ -743,7 +743,7 @@ func (*io2) set(spec *specs.LinuxResources, path string) error {
 				return err
 			}
 		} else {
-			// bfq io scheduler is not available, fallback to io.weight with
+			// bfq io scheduler is not available, fall back to io.weight with
 			// a conversion scheme
 			ioWeight := convertBlkIOToIOWeightValue(*blkio.Weight)
 			if err = setValue(path, "io.weight", strconv.FormatUint(ioWeight, 10)); err != nil {

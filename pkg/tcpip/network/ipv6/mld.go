@@ -40,7 +40,7 @@ const (
 	_ MLDVersion = iota
 	// MLDVersion1 indicates MLDv1.
 	MLDVersion1
-	// MLDVersion2 indicates MLDv2. Note that MLD may still fallback to V1
+	// MLDVersion2 indicates MLDv2. Note that MLD may still fall back to V1
 	// compatibility mode as required by MLDv2.
 	MLDVersion2
 )

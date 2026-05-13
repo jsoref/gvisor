@@ -308,7 +308,7 @@ func Bind(sockfd int, ifindex, queueID uint32, useNeedWakeup bool) error {
 		// burning cycles.
 		//
 		// By not setting either XDP_COPY or XDP_ZEROCOPY, we instruct
-		// the kernel to use zerocopy if available and then fallback to
+		// the kernel to use zerocopy if available and then fall back to
 		// copy mode.
 		Flags:   flags,
 		Ifindex: ifindex,

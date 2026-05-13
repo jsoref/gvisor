@@ -439,7 +439,7 @@ func argsFromProcess(specProc *specs.Process, p *specs.Process, enableRaw bool) 
 	// Create capabilities.
 	procCaps := p.Capabilities
 	if procCaps == nil {
-		// If p doesn't have capabilities specified, fallback to the capabilities
+		// If p doesn't have capabilities specified, fall back to the capabilities
 		// specified in the container spec.
 		procCaps = specProc.Capabilities
 	}

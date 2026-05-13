@@ -101,7 +101,7 @@ type directfsInode struct {
 	controlFD int
 
 	// controlFDLisa is a lisafs control FD on this dentry.
-	// This is used to fallback to using lisafs RPCs in the following cases:
+	// This is used to fall back to using lisafs RPCs in the following cases:
 	// * When parent dentry is required to perform operations but
 	//   dentry.parent = nil (root dentry).
 	// * For path-based syscalls (like connect(2) and bind(2)) on sockets.
@@ -752,7 +752,7 @@ func (i *directfsInode) mknod(ctx context.Context, name string, creds *auth.Cred
 // Precondition: opts.Endpoint != nil and is transport.HostBoundEndpoint type.
 func (i *directfsInode) bindAt(ctx context.Context, name string, creds *auth.Credentials, opts *vfs.MknodOptions, d *dentry) (*dentry, error) {
 	// There are no filesystems mounted in the sandbox process's mount namespace.
-	// So we can't perform absolute path traversals. So fallback to using lisafs.
+	// So we can't perform absolute path traversals. So fall back to using lisafs.
 	if err := i.ensureLisafsControlFD(ctx, d); err != nil {
 		return nil, err
 	}
@@ -851,7 +851,7 @@ func (i *directfsInode) getDirentsLocked(recordDirent func(name string, key inoK
 // Precondition: fs.renameMu is locked.
 func (i *directfsInode) connect(ctx context.Context, sockType linux.SockType, euid lisafs.UID, egid lisafs.GID, d *dentry) (int, error) {
 	// There are no filesystems mounted in the sandbox process's mount namespace.
-	// So we can't perform absolute path traversals. So fallback to using lisafs.
+	// So we can't perform absolute path traversals. So fall back to using lisafs.
 	if err := i.ensureLisafsControlFD(ctx, d); err != nil {
 		return -1, err
 	}
