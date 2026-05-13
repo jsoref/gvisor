@@ -678,7 +678,7 @@ func testDockerRun(ctx context.Context, t *testing.T, d *dockerutil.Container, o
 	}
 	cmd = append(cmd, testAlpineImage, "sh", "-c", "apk add curl && apk info -d curl")
 
-	expectedOutput := "URL retrival utility and library"
+	expectedOutput := "URL retrieval utility and library"
 	output, err := dockerInGvisorExecOutput(ctx, d, cmd)
 	if err != nil {
 		t.Fatalf("docker exec failed: %v", err)
