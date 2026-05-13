@@ -446,7 +446,7 @@ func (s *StatReq) String() string {
 	return fmt.Sprintf("StatReq{FD: %d}", s.FD)
 }
 
-// SetStatReq is used to set attributeds on FDs.
+// SetStatReq is used to set attributes on FDs.
 //
 // +marshal boundCheck
 type SetStatReq struct {
