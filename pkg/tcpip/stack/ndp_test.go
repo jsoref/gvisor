@@ -6043,7 +6043,7 @@ func TestStopStartSolicitingRouters(t *testing.T) {
 			test.stopFn(t, s, false /* first */)
 			clock.Advance(delay)
 			if pb := e.Read(); pb != nil {
-				t.Fatal("unexpectedly got a packet after router solicitation has been stopepd")
+				t.Fatal("unexpectedly got a packet after router solicitation has been stopped")
 			}
 
 			// If test.startFn is nil, there is no way to restart router solicitations.
