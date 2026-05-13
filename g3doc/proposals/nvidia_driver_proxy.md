@@ -82,7 +82,7 @@ by methods on the `Object` class. API-accessed objects are most frequently
 created by invocations of `ioctl(NV_ESC_RM_ALLOC)`, which is parameterized by
 `hClass`. `src/nvidia/src/kernel/rmapi/resource_list.h` specifies the mapping
 from `hClass` to instantiated ("internal") class, as well as the type of the
-pointee of `NVOS21_PARAMETERS::pAllocParms` or `NVOS64_PARAMETERS::pAllocParms`
+pointee of `NVOS21_PARAMETERS::pAllocParams` or `NVOS64_PARAMETERS::pAllocParams`
 which the object's constructor takes as input ("alloc param info").
 
 ## Key Issues
