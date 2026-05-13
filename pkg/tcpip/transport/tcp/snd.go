@@ -1063,7 +1063,7 @@ func (s *sender) postXmit(dataSent bool, shouldScheduleProbe bool) {
 
 	// If the sender has advertised zero receive window and we have
 	// data to be sent out, start zero window probing to query the
-	// the remote for it's receive window size.
+	// the remote for its receive window size.
 	if s.writeNext != nil && s.SndWnd == 0 {
 		s.enableZeroWindowProbing()
 	}

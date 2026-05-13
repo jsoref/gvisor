@@ -24,7 +24,7 @@ MySQL via the `db` service host name.
 > security/performance trade-off makes the most sense. See the
 > [Production guide] for more details.
 
-> **Note**: Docker Compose uses it's own network by default and allows services
+> **Note**: Docker Compose uses its own network by default and allows services
 > to communicate using their service name. Docker Compose does this by setting
 > up a DNS server at IP address 127.0.0.11 and configuring containers to use it
 > via [resolv.conf][resolv.conf]. This IP is not addressable inside a gVisor
