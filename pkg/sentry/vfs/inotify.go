@@ -704,7 +704,7 @@ func (e *Event) CopyTo(ctx context.Context, buf []byte, dst usermem.IOSequence) 
 		writeLen += n
 	}
 
-	// Santiy check.
+	// Sanity check.
 	if writeLen != e.sizeOf() {
 		panic(fmt.Sprintf("Serialized unexpected amount of data for an event, expected %d, wrote %d.", e.sizeOf(), writeLen))
 	}
