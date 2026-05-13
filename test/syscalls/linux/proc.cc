@@ -2919,7 +2919,7 @@ TEST(ProcTask, CommCanSetSelfThreadName) {
 TEST(ProcTask, CommCanSetPeerThreadName) {
   constexpr char kThreadName[] = "TestThread12345";
 
-  // Path correspond to *this* thread's tid. We will changed it from the new
+  // Path correspond to *this* thread's tid. We will change it from the new
   // thread created below.
   auto path = JoinPath("/proc", absl::StrCat(getpid()), "task",
                        absl::StrCat(syscall(SYS_gettid)), "comm");
