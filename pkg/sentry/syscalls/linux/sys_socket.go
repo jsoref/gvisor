@@ -143,7 +143,7 @@ func CaptureAddress(t *kernel.Task, addr hostarch.Addr, addrlen uint32) ([]byte,
 }
 
 // writeAddress writes a sockaddr structure and its length to an output buffer
-// in the unstrusted address space range. If the address is bigger than the
+// in the untrusted address space range. If the address is bigger than the
 // buffer, it is truncated.
 func writeAddress(t *kernel.Task, addr linux.SockAddr, addrLen uint32, addrPtr hostarch.Addr, addrLenPtr hostarch.Addr) error {
 	// Get the buffer length.
