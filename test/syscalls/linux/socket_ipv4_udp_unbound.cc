@@ -2345,7 +2345,7 @@ TEST_P(IPv4UDPUnboundSocketTest, IpMulticastIPPacketInfo) {
 }
 
 // Guard against a regression of b/448895123.
-TEST_P(IPv4UDPUnboundSocketTest, SendWithProtNoneBufEfaults) {
+TEST_P(IPv4UDPUnboundSocketTest, SendWithProtNoneBufDefaults) {
   auto s = ASSERT_NO_ERRNO_AND_VALUE(NewSocket());
 
   void* data = mmap(nullptr, getpagesize(), PROT_READ | PROT_WRITE,
