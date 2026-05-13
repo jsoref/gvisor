@@ -194,7 +194,7 @@ func (c *Command) Stderr() []string {
 	return c.stderrLines[:]
 }
 
-// Combined returns the combined stodut/stderr lines of the command so far.
+// Combined returns the combined stdout/stderr lines of the command so far.
 // This is not the same as stdout concatenated with stderr, as it preserves
 // line ordering as they were emitted.
 func (c *Command) Combined() []string {
