@@ -80,7 +80,7 @@ const sizeOfInt32 = 4
 // messageHeader64Len is the length of a MessageHeader64 struct.
 var messageHeader64Len = uint64((*MessageHeader64)(nil).SizeBytes())
 
-// multipleMessageHeader64Len is the length of a multipeMessageHeader64 struct.
+// multipleMessageHeader64Len is the length of a multipleMessageHeader64 struct.
 var multipleMessageHeader64Len = uint64((*multipleMessageHeader64)(nil).SizeBytes())
 
 // baseRecvFlags are the flags that are accepted across recvmsg(2),
