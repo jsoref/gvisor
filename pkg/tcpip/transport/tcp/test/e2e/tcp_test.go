@@ -7026,7 +7026,7 @@ func TestPassiveFailedConnectionAttemptIncrement(t *testing.T) {
 
 	srcPort := uint16(context.TestPort)
 	// Now attempt a handshakes it will fill up the accept backlog.
-	executeHandshake(t, c, srcPort, true /* synCookesInUse */)
+	executeHandshake(t, c, srcPort, true /* synCookiesInUse */)
 
 	// Give time for the final ACK to be processed as otherwise the next handshake could
 	// get accepted before the previous one based on goroutine scheduling.
