@@ -3723,7 +3723,7 @@ func TestPGIDField(t *testing.T) {
 }
 
 // Test that container can run even when there are corrupt state files in the
-// root directiry.
+// root directory.
 func TestCreateWithCorruptedStateFile(t *testing.T) {
 	conf := testutil.TestConfig(t)
 	spec := testutil.NewSpecWithArgs("/bin/true")
