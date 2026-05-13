@@ -5980,7 +5980,7 @@ func TestStackSetAvailableCongestionControl(t *testing.T) {
 	// Verify that we still get the expected list of congestion control options.
 	var cc tcpip.TCPAvailableCongestionControlOption
 	if err := s.TransportProtocolOption(tcp.ProtocolNumber, &cc); err != nil {
-		t.Fatalf("s.TransportProtocolOptio(%d, &%T(%s)): %s", tcp.ProtocolNumber, cc, cc, err)
+		t.Fatalf("s.TransportProtocolOption(%d, &%T(%s)): %s", tcp.ProtocolNumber, cc, cc, err)
 	}
 	if got, want := cc, tcpip.TCPAvailableCongestionControlOption("reno cubic"); got != want {
 		t.Fatalf("got tcpip.TCPAvailableCongestionControlOption = %s, want = %s", got, want)
