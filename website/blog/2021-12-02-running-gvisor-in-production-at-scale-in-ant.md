@@ -354,7 +354,7 @@ syscalls walks a much longer path (redpill), makes it worse.
 We have two optimizations here: 1. decrease the number of timer buckets, from 64
 to 4; 2. decrease the timer precision from ns to ms. You may worry about the
 decrease of timer precision, but as we see, most of the applications are
-event-based, and not affected by a coarse grained timer.
+event-based, and not affected by a coarse-grained timer.
 
 However, Go changes the implementation of timer in v1.14; how to port this
 optimization remains an open question.
