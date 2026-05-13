@@ -586,7 +586,7 @@ func (o NDPPrefixInformation) String() string {
 // that are valid.
 //
 // Valid values are in the range [0, 128], but o may not always contain valid
-// values. It is up to the caller to valdiate the Prefix Information option.
+// values. It is up to the caller to validate the Prefix Information option.
 func (o NDPPrefixInformation) PrefixLength() uint8 {
 	return o[ndpPrefixInformationPrefixLengthOffset]
 }
