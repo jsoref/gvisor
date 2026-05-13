@@ -1170,7 +1170,7 @@ func (n *node) traverse(fn traverseFunc, kr knownRange, syscallMap map[uintptr]s
 
 // DataAsBPFInput converts a linux.SeccompData to a bpf.Input.
 // It uses `buf` as scratch buffer; this buffer must be wide enough
-// to accommodate a mashaled version of `d`.
+// to accommodate a marshalled version of `d`.
 func DataAsBPFInput(d *linux.SeccompData, buf []byte) bpf.Input {
 	if len(buf) < d.SizeBytes() {
 		panic(fmt.Sprintf("buffer must be at least %d bytes long", d.SizeBytes()))
