@@ -1028,7 +1028,7 @@ func (c *Context) CreateConnectedWithOptions(wantOptions header.TCPSynOptions, d
 
 	// Read ACK.
 	var ackPacket *buffer.View
-	// Ignore retransimitted SYN packets.
+	// Ignore retransmitted SYN packets.
 	for {
 		packet := c.GetPacket()
 		defer packet.Release()
