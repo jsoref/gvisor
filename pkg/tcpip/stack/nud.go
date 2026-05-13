@@ -193,7 +193,7 @@ type NUDConfigurations struct {
 	// MinRandomFactor is the minimum value of the random factor used for
 	// computing reachable time.
 	//
-	// See BaseReachbleTime for more information on computing the reachable time.
+	// See BaseReachableTime for more information on computing the reachable time.
 	//
 	// Must be greater than 0.
 	MinRandomFactor float32
@@ -201,7 +201,7 @@ type NUDConfigurations struct {
 	// MaxRandomFactor is the maximum value of the random factor used for
 	// computing reachabile time.
 	//
-	// See BaseReachbleTime for more information on computing the reachable time.
+	// See BaseReachableTime for more information on computing the reachable time.
 	//
 	// Must be great than or equal to MinRandomFactor.
 	MaxRandomFactor float32
