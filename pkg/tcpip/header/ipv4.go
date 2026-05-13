@@ -1163,7 +1163,7 @@ func (s IPv4OptionsSerializer) Length() uint8 {
 // Serialize serializes the provided list of IPV4 options into b.
 //
 // Note, b must be of sufficient size to hold all the options in s. See
-// IPv4OptionsSerializer.Length for details on the getting the total size
+// IPv4OptionsSerializer.Length for details on getting the total size
 // of a serialized IPv4OptionsSerializer.
 //
 // Serialize panics if b is not of sufficient size to hold all the options in s.
