@@ -166,8 +166,8 @@ and will be rolling out to
 [GKE Sandbox](https://cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods)
 soon, so no action is required to see a performance boost. Network-bound
 workloads, such as web servers or databases like Redis, are the most likely to
-see benefits. All the code implementing bufferv2 is public
-[here](https://github.com/google/gvisor/tree/master/pkg/bufferv2), and
+see benefits. All the [code implementing
+bufferv2](https://github.com/google/gvisor/tree/master/pkg/bufferv2) is public, and
 contributions are welcome! If you’d like to run the iperf benchmark for
 yourself, you can run:
 
