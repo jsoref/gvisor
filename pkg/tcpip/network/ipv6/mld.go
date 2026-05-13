@@ -149,7 +149,7 @@ func (b *mldv2ReportBuilder) AddRecord(genericRecordType ip.MulticastGroupProtoc
 	case ip.MulticastGroupProtocolV2ReportRecordBlockOldSources:
 		recordType = header.MLDv2ReportRecordBlockOldSources
 	default:
-		panic(fmt.Sprintf("unrecognied genericRecordType = %d", genericRecordType))
+		panic(fmt.Sprintf("unrecognized genericRecordType = %d", genericRecordType))
 	}
 
 	b.records = append(b.records, header.MLDv2ReportMulticastAddressRecordSerializer{
