@@ -1037,7 +1037,7 @@ func (s *sender) sendZeroWindowProbe() {
 func (s *sender) enableZeroWindowProbing() {
 	s.zeroWindowProbing = true
 	// We piggyback the probing on the retransmit timer with the
-	// current retranmission interval, as we may start probing while
+	// current retransmission interval, as we may start probing while
 	// segment retransmissions.
 	if s.firstRetransmittedSegXmitTime == (tcpip.MonotonicTime{}) {
 		s.firstRetransmittedSegXmitTime = s.ep.stack.Clock().NowMonotonic()
@@ -1101,7 +1101,7 @@ func (s *sender) sendData() {
 	// Reduce the congestion window to min(IW, cwnd) per RFC 5681, page 10.
 	// "A TCP SHOULD set cwnd to no more than RW before beginning
 	// transmission if the TCP has not sent data in the interval exceeding
-	// the retrasmission timeout."
+	// the retransmission timeout."
 	if !s.FastRecovery.Active && s.state != tcpip.RTORecovery && s.ep.stack.Clock().NowMonotonic().Sub(s.LastSendTime) > s.RTO {
 		if s.SndCwnd > InitialCwnd {
 			s.SndCwnd = InitialCwnd
@@ -1856,7 +1856,7 @@ func (s *sender) sendSegmentFromPacketBuffer(pkt *stack.PacketBuffer, flags head
 	s.MaxSentAck = rcvNxt
 
 	// We need to clone the packet because sendRaw takes ownership of pkt,
-	// and pkt could be reprocessed later on (i.e retrasmission).
+	// and pkt could be reprocessed later on (i.e retransmission).
 	pkt = pkt.Clone()
 	defer pkt.DecRef()
 
