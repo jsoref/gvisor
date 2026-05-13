@@ -565,7 +565,7 @@ type Endpoint struct {
 
 	stats Stats
 
-	// tcpLingerTimeout is the maximum amount of a time a socket
+	// tcpLingerTimeout is the maximum amount of time a socket
 	// a socket stays in TIME_WAIT state before being marked
 	// closed.
 	tcpLingerTimeout time.Duration
