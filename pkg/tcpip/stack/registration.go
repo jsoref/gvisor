@@ -513,7 +513,7 @@ type AddressProperties struct {
 	// Lifetimes encodes the address' lifetimes.
 	//
 	// Lifetimes.PreferredUntil and Lifetimes.ValidUntil are informational, i.e.
-	// the stack will not deprecated nor invalidate the address upon reaching
+	// the stack will neither deprecate nor invalidate the address upon reaching
 	// these timestamps.
 	//
 	// If Lifetimes.Deprecated is true, the address will be added as deprecated.
