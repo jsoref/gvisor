@@ -1437,7 +1437,7 @@ TEST(MountTest, ReuseGroupIDs) {
 }
 
 // Tests that a child mount inherits the propagation type of its parent.
-TEST(MountTest, InerheritPropagation) {
+TEST(MountTest, InheritPropagation) {
   SKIP_IF(!ASSERT_NO_ERRNO_AND_VALUE(HaveCapability(CAP_SYS_ADMIN)));
 
   auto const dir1 = ASSERT_NO_ERRNO_AND_VALUE(TempPath::CreateDir());
